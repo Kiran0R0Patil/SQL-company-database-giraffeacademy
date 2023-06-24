@@ -1,5 +1,6 @@
 # Company DataBase
 
+## Intro to SQL
 **SQL** stands for **Structured Query Language**
 It is a programming language specifically designed for managing and manipulating relational databases. 
 SQL allows users to define, retrieve, and manipulate data stored in a database management system (DBMS).
@@ -24,3 +25,5 @@ SQL allows users to define, retrieve, and manipulate data stored in a database m
 4.**DCL** (Data Control Language): DCL statements are used to control access to the database and manage privileges. They are used to grant or revoke permissions to database users. Common DCL statements include:
 - GRANT: Used to provide specific privileges to a user or role.
 - REVOKE: Used to remove specific privileges from a user or role.
+___
+## Company DataBase Intro
