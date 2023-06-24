@@ -27,3 +27,14 @@ SQL allows users to define, retrieve, and manipulate data stored in a database m
 - REVOKE: Used to remove specific privileges from a user or role.
 ___
 ## Company DataBase Intro
+
+Database Schema 
+: refers to the structure or blueprint of a database. It defines how the data is organized, the relationships between different data elements, and the constraints and rules that govern the data.
+
+![Click Here to Download/view PDF](company-database-intro.pdf)
+
+![database_structure](company-database-intro.jpg)
+
+Let's start creating the tables.
+check out ![SQL code](company-database.sql)
+
