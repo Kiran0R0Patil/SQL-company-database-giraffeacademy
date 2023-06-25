@@ -1,4 +1,4 @@
-# Company DataBase
+![image](https://github.com/Kiran0R0Patil/SQL-company-database-giraffeacademy/assets/91089009/5c926d78-2f4b-4089-b0fe-cd8279de83be)![image](https://github.com/Kiran0R0Patil/SQL-company-database-giraffeacademy/assets/91089009/80f69099-b89e-4bc3-b100-343c9d420422)![image](https://github.com/Kiran0R0Patil/SQL-company-database-giraffeacademy/assets/91089009/d2afea13-c4f4-4a5d-9ea8-587a02df6bd1)![image](https://github.com/Kiran0R0Patil/SQL-company-database-giraffeacademy/assets/91089009/f9f554ba-dfbc-4194-86e7-ebb274e75afd)# Company DataBase
 
 ## Intro to SQL
 **SQL** stands for **Structured Query Language**
@@ -35,6 +35,36 @@ Database Schema
 
 ![database_structure](company-database-intro.jpg)
 
-Let's start creating the tables.
+___
+
+**TASK 1** : creating company database.
+
+**TASK 2** : inserting data/information.
+
+**TASK 3** : write basic queries to get the data for the below 15 questions mentioned.<br>
+Q1)  Find all employees<br>
+Q2)  Find all clients<br>
+Q3)  Find all employees ordered by salary<br>
+Q4)  Find all employees ordered by sex then name<br>
+Q5)  Find the first 5 employees in the table<br>
+Q6)  Find the first and last names of all employees<br>
+Q7)  Find the forename and surnames names of all employees<br>
+Q8)  Find out all the different genders<br>
+Q9)  Find all male employees<br>
+Q10)  Find all employees at branch 2<br>
+Q11)  Find all employee's id's and names who were born after 1969<br>
+Q12)  Find all female employees at branch 2<br>
+Q13)  Find all employees who are female & born after 1969 or who make over 80000<br>
+Q14)  Find all employees born between 1970 and 1975<br>
+Q15)  Find all employees named Jim, Michael, Johnny or David<br>
+ 
+**TASK 4** : write functions to get the data relating to numbers/mathematical operations.<br>
+Q1)  Find the number of employees<br>
+Q2)  Find the average of all employee's salaries<br>
+Q3)  Find the sum of all employee's salaries<br>
+Q4)  Find out how many males and females there are<br>
+Q5)  Find the total sales of each salesman<br>
+Q6)  Find the total amount of money spent by each client<br>
+
 check out ![SQL code](company-database.sql)
 
