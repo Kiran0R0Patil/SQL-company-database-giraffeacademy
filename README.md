@@ -1,4 +1,4 @@
-![image](https://github.com/Kiran0R0Patil/SQL-company-database-giraffeacademy/assets/91089009/5c926d78-2f4b-4089-b0fe-cd8279de83be)![image](https://github.com/Kiran0R0Patil/SQL-company-database-giraffeacademy/assets/91089009/80f69099-b89e-4bc3-b100-343c9d420422)![image](https://github.com/Kiran0R0Patil/SQL-company-database-giraffeacademy/assets/91089009/d2afea13-c4f4-4a5d-9ea8-587a02df6bd1)![image](https://github.com/Kiran0R0Patil/SQL-company-database-giraffeacademy/assets/91089009/f9f554ba-dfbc-4194-86e7-ebb274e75afd)# Company DataBase
+# Company DataBase
 
 ## Intro to SQL
 **SQL** stands for **Structured Query Language**
