@@ -140,79 +140,201 @@ SELECT * FROM client;
 SELECT * FROM works_with;
 SELECT * FROM branch_supplier;
 
-/* TASK 3 : write basic queries to get the data for 15 questions mentioned in Readme file */
+/* TASK 3 : Queries to get the specific data - mentioned in Readme file */
 
--- Find all employees
+-- Q1) Find all employees
 SELECT * 
 FROM employee;
 
--- Find all clients
+-- Q2) Find all clients
 SELECT * 
 FROM client;
 
--- Find all employees ordered by salary
+-- Q3) Find all employees ordered by salary
 SELECT * 
 FROM employee 
 ORDER BY salary DESC;
 
--- Find all employees ordered by sex then name
+-- Q4) Find all employees ordered by sex then name
 SELECT * 
 FROM employee 
 ORDER BY sex, first_name;
 
--- Find the first 5 employees in the table
+-- Q5) Find the first 5 employees in the table
 SELECT * 
 FROM employee 
 LIMIT 5;
 
--- Find the first and last names of all employees
+-- Q6) Find the first and last names of all employees
 SELECT first_name,last_name 
 FROM employee;
 
--- Find the forename and surnames names of all employees
+-- Q7) Find the forename and surnames names of all employees
 SELECT first_name AS forename, last_name AS surname
 FROM employee;
 
--- Find out all the different genders
+-- Q8) Find out all the different genders
 SELECT DISTINCT sex
 FROM employee;
 
--- Find all male employees
+-- Q9) Find all male employees
 SELECT *
 FROM employee
 WHERE sex='M';
 
--- Find all employees at branch 2
+-- Q10) Find all employees at branch 2
 SELECT *
 FROM employee
 WHERE branch_id = 2;
 
--- Find all employee's id's and names who were born after 1969
+-- Q11) Find all employee's id's and names who were born after 1969
 SELECT emp_id,first_name
 FROM employee
 WHERE birth_date>= 1969-01-01;
 
--- Find all female employees at branch 2
+-- Q12) Find all female employees at branch 2
 SELECT *
 FROM employee
 WHERE sex='F' AND branch_id=2;
 
--- Find all employees who are female & born after 1969 or who make over 80000
+-- Q13) Find all employees who are female & born after 1969 or who make over 80000
 SELECT *
 FROM employee
 WHERE (sex='F' AND birth_date>= 1969-01-01) OR salary>80000;
 
--- Find all employees born between 1970 and 1975
+-- Q14)  Find all employees born between 1970 and 1975
 SELECT *
 FROM employee
 WHERE birth_date BETWEEN '1970-01-01' AND '1975-01-01';
 
--- Find all employees named Jim, Michael, Johnny or David
+-- Q15)  Find all employees named Jim, Michael, Johnny or David
 SELECT *
 FROM employee
 WHERE first_name IN ('Jim','Michael','Johnny','David');
 
-/* TASK 4 : write functions to get the data relating to numbers/mathematical operations */
+-- Q16)  Find the number of employees
+SELECT COUNT(emp_id)
+FROM employee;
 
+-- Q17)  Find the average of all employee's salaries
+SELECT ROUND(AVG(salary),2)
+FROM employee;
 
+-- Q18)  Find the sum of all employee's salaries
+SELECT ROUND(SUM(salary),2)
+FROM employee;
+
+-- Q19)  Find out how many males and females there are
+SELECT COUNT(sex),sex
+FROM employee
+GROUP BY sex;
+
+-- Q20)  Find the total sales of each salesman
+SELECT SUM(total_sales),emp_id
+FROM works_with
+GROUP BY emp_id;
+
+-- Q21)  Find the total amount of money spent by each client
+SELECT SUM(total_sales),client_id
+FROM works_with
+GROUP BY client_id;
+
+-- % = any # characters, _ = one character
+-- Q22)  Find any client's who are an LLC
+SELECT *
+FROM client
+WHERE client_name LIKE '%LLC';
+
+-- Q23)  Find any branch suppliers who are in the label business
+SELECT *
+FROM branch_supplier
+WHERE supplier_name LIKE '%label%';
+
+-- Q24)  Find any employee born on the 10th day of the month
+SELECT *
+FROM employee
+WHERE birth_date LIKE '________10';
+
+-- Q25)  Find any clients who are schools
+SELECT *
+FROM client
+WHERE client_name LIKE '%school%';
+
+-- Unions
+-- Q26)  Find a list of employee and branch names
+SELECT employee.first_name AS Employee_Branch_Name
+FROM employee
+UNION
+SELECT branch.branch_name
+FROM branch;
+
+-- Q27)  Find a list of all clients & branch suppliers' names
+SELECT client.client_name AS Non_Employee_Entities
+FROM client
+UNION
+SELECT branch_supplier.supplier_name
+FROM branch_supplier;
+
+-- Joins
+-- Q28) Find all branches and the name of their managers
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee
+JOIN branch 							-- inner/general/normal JOIN - 1
+on employee.emp_id = branch.mgr_id;
+
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee
+LEFT JOIN branch 							-- LEFT JOIN - 2
+ON employee.emp_id = branch.mgr_id;
+
+INSERT INTO branch VALUES(4,'Temp',NULL,NULL); -- to see the difference while doing right join
+
+SELECT employee.emp_id, employee.first_name, branch.branch_name
+FROM employee
+RIGHT JOIN branch 							--  RIGHT JOIN - 3, (4 FULL JOIN)
+ON employee.emp_id = branch.mgr_id;
+
+-- Nested quaries
+-- Q29) Find names of all employees who have sold over 50,000
+SELECT first_name,last_name
+FROM employee
+WHERE emp_id IN (SELECT works_with.emp_id 
+				 FROM works_with 
+                 WHERE total_sales > 50000);
+
+-- Q30) Find all clients who are handles by the branch that Michael Scott manages
+-- Assuming I know Michael's ID : 102
+SELECT client.client_name
+FROM client
+WHERE branch_id = (SELECT branch.branch_id
+					FROM branch
+                    WHERE mgr_id = 102);
+
+-- Assuming I DONT'T know Michael's ID
+SELECT client.client_name
+FROM client
+WHERE client.branch_id = (SELECT branch.branch_id
+						  FROM branch
+						  WHERE branch.mgr_id = (SELECT employee.emp_id
+												 FROM employee
+                                                 WHERE employee.first_name = 'Michael'));
+-- Q31) Find the names of employees who work with clients handled by the scranton branch
+SELECT employee.first_name,employee.last_name
+FROM employee
+WHERE employee.emp_id IN (SELECT works_with.emp_id FROM works_with)
+						AND employee.branch_id = (SELECT branch.branch_id 
+												  FROM branch
+                                                  WHERE branch_name='Scranton');
+
+-- Q32) Find the names of all clients who have spent more than 100,000 dollars
+SELECT client.client_name
+FROM client
+WHERE client.client_id IN ( SELECT client_id AS k100_id
+							FROM (
+									SELECT SUM(works_with.total_sales) AS total_spent, client_id
+                                    FROM works_with
+                                    GROUP BY client_id) AS total_client_spent
+							WHERE total_spent > 100000 );
+
+                                    
 

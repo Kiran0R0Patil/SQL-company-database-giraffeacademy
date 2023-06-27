@@ -41,30 +41,42 @@ ___
 
 **TASK 2** : inserting data/information.
 
-**TASK 3** : write basic queries to get the data for the below 15 questions mentioned.<br>
-Q1)  Find all employees<br>
-Q2)  Find all clients<br>
-Q3)  Find all employees ordered by salary<br>
-Q4)  Find all employees ordered by sex then name<br>
-Q5)  Find the first 5 employees in the table<br>
-Q6)  Find the first and last names of all employees<br>
-Q7)  Find the forename and surnames names of all employees<br>
-Q8)  Find out all the different genders<br>
-Q9)  Find all male employees<br>
-Q10)  Find all employees at branch 2<br>
-Q11)  Find all employee's id's and names who were born after 1969<br>
-Q12)  Find all female employees at branch 2<br>
-Q13)  Find all employees who are female & born after 1969 or who make over 80000<br>
-Q14)  Find all employees born between 1970 and 1975<br>
-Q15)  Find all employees named Jim, Michael, Johnny or David<br>
- 
-**TASK 4** : write functions to get the data relating to numbers/mathematical operations.<br>
-Q1)  Find the number of employees<br>
-Q2)  Find the average of all employee's salaries<br>
-Q3)  Find the sum of all employee's salaries<br>
-Q4)  Find out how many males and females there are<br>
-Q5)  Find the total sales of each salesman<br>
-Q6)  Find the total amount of money spent by each client<br>
+**TASK 3** : write Queries to get the specific data mentioned below.<br>
+Q1) Find all employees<br>
+Q2) Find all clients<br>
+Q3) Find all employees ordered by salary<br>
+Q4) Find all employees ordered by sex then name<br>
+Q5) Find the first 5 employees in the table<br>
+Q6) Find the first and last names of all employees<br>
+Q7) Find the forename and surnames names of all employees<br>
+Q8) Find out all the different genders<br>
+Q9) Find all male employees<br>
+Q10) Find all employees at branch 2<br>
+Q11) Find all employee's id's and names who were born after 1969<br>
+Q12) Find all female employees at branch 2<br>
+Q13) Find all employees who are female & born after 1969 or who make over 80000<br>
+Q14) Find all employees born between 1970 and 1975<br>
+Q15) Find all employees named Jim, Michael, Johnny or David<br>
+Q16) Find the number of employees<br>
+Q17) Find the average of all employee's salaries<br>
+Q18) Find the sum of all employee's salaries<br>
+Q19) Find out how many males and females there are<br>
+Q20) Find the total sales of each salesman<br>
+Q21) Find the total amount of money spent by each client<br>
+Q22) Find any client's who are an LLC<br>
+Q23) Find any branch suppliers who are in the label business<br>
+Q24) Find any employee born on the 10th day of the month<br>
+Q25) Find any clients who are schools<br>
+Q26) Find a list of employee and branch names<br>
+Q27) Find a list of all clients & branch suppliers' names<br>
+Q28) Find all branches and the name of their managers<br>
+Q29) Find names of all employees who have sold over 50,000<br>
+Q30) Find all clients who are handles by the branch that Michael Scott manages<br>
+Q31) Find the names of employees who work with clients handled by the scranton branch<br>
+Q32) Find the names of all clients who have spent more than 100,000 dollars<br>
+
+![company database schema](company-database-schema.png)
+___
 
 check out ![SQL code](company-database.sql)
 
