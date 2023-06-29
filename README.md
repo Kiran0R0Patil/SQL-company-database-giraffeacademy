@@ -74,7 +74,7 @@ Q30) Find all clients who are handles by the branch that Michael Scott manages<b
 Q31) Find the names of employees who work with clients handled by the scranton branch<br>
 Q32) Find the names of all clients who have spent more than 100,000 dollars<br>
 
-![company database schema](database-schema.png)
+![company database schema](database-schema.PNG)
 ___
 
 check out ![SQL code](company-database.sql)
