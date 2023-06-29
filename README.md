@@ -31,9 +31,8 @@ ___
 Database Schema 
 : refers to the structure or blueprint of a database. It defines how the data is organized, the relationships between different data elements, and the constraints and rules that govern the data.
 
-![Click Here to Download/view PDF](company-database-intro.pdf)
 
-![database_structure](company-database-intro.jpg)
+![database_structure](database-intro.jpg)
 
 ___
 
@@ -75,7 +74,7 @@ Q30) Find all clients who are handles by the branch that Michael Scott manages<b
 Q31) Find the names of employees who work with clients handled by the scranton branch<br>
 Q32) Find the names of all clients who have spent more than 100,000 dollars<br>
 
-![company database schema](company-database-schema.png)
+![company database schema](database-schema.png)
 ___
 
 check out ![SQL code](company-database.sql)
