@@ -79,7 +79,7 @@ ___
 check out ![SQL code](company-database.sql)
 
 ___
-
+**ER Diagram Template**  
 ![ER Diagram Template](erd-template.png)
 
 **Company Data Storage Requirements**
@@ -100,6 +100,8 @@ Employees can work with clients controlled by their branch to sell them stuff. I
 
 Many branches will need to work with suppliers to buy inventory. For each supplier we’ll keep track of their name and the type of product they’re selling the branch. A single supplier may supply products to multiple branches.
 
+**Company ER Diagram**  
 ![company ER Diagram](company-erd.png)
 
+**Company database schema**
 ![company database schema](database-schema.PNG)
