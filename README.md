@@ -80,7 +80,7 @@ check out ![SQL code](company-database.sql)
 
 ___
 
-![ER Diagram Template](erd-template.PNG)
+![ER Diagram Template](erd-template.png)
 
 **Company Data Storage Requirements**
 
@@ -102,4 +102,4 @@ Many branches will need to work with suppliers to buy inventory. For each suppli
 
 ![company ER Diagram](company-erd.png)
 
-![company database schema](database-schema.png)
+![company database schema](database-schema.PNG)
